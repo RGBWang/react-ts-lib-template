@@ -1,4 +1,4 @@
-const { replaceAll } = require("../src/index");
+const { replaceAll } = require("@/index");
 describe("ttt group", () => {
     test("123", () => {
         expect(replaceAll("abab", "a", "c") === "cbcb").toBeTruthy();
