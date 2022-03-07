@@ -1,5 +1,6 @@
 {
     "extends": "./config/tsconfig.extend.json",
+    "files": ["./src/index.ts"],
     "compilerOptions": {
         "target": "es5",
         "lib": ["dom", "dom.iterable", "esnext"],
@@ -13,10 +14,12 @@
         "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
         "jsx": "react-jsx",
-        "baseUrl": "."
+        "baseUrl": ".",
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist",
+        "isolatedModules": true
     },
-    "include": ["src", "test"]
+    "include": ["src/react-app-env.d.ts"]
 }
