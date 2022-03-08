@@ -48,7 +48,18 @@ export default {
         }),
         babel({
             exclude: "./node_modules/**",
-            presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+            presets: [
+                [
+                    "@babel/preset-env",
+                    {
+                        modules: false,
+                        targets: "defaults",
+                    },
+                ],
+                ,
+                "@babel/preset-react",
+                "@babel/preset-typescript",
+            ],
             babelHelpers: "bundled",
             extensions,
         }),
