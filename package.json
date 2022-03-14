@@ -2,8 +2,8 @@
     "name": "@rgb/tslib",
     "version": "0.1.0",
     "description": "",
-    "main": "dist/index.cjs.js",
-    "module": "dist/index.esm.js",
+    "main": "dist/libname.cjs.js",
+    "module": "dist/libname.esm.js",
     "typings": "dist/index.d.ts",
     "files": [
         "dist"

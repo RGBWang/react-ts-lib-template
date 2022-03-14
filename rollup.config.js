@@ -56,7 +56,6 @@ export default {
                         targets: "defaults",
                     },
                 ],
-                ,
                 "@babel/preset-react",
                 "@babel/preset-typescript",
             ],
