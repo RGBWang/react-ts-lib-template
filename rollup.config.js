@@ -7,6 +7,7 @@ import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import alias from "@rollup/plugin-alias";
 import pkg from "./package.json";
+import del from "rollup-plugin-delete";
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 export default {
     input: "src/index.ts",
@@ -23,6 +24,7 @@ export default {
         },
     ],
     plugins: [
+        del({ targets: "dist/*" }),
         external(),
         alias({
             entries: {
@@ -42,7 +44,7 @@ export default {
         }),
         image(),
         glslify({
-            include: ["**/*.vs", "**/*.fs", "**/*.vert", "**/*.frag", "**/*.glsl"],
+            include: ["**/*.glsl"],
             exclude: "node_modules/**",
             compress: false,
         }),
