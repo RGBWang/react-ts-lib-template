@@ -1,6 +1,5 @@
-import { App } from "./App";
-import { Button } from "./Button";
-export { App, Button };
+export { App } from "./App";
+export { Button } from "./Button";
 export function replaceAll(content: string, searchValue: string, replaceValue: string): string {
     if (!content) {
         return content;
