@@ -11,7 +11,7 @@
     "scripts": {
         "start": "craco start --config config/start.config.js",
         "build": "rollup --config && tsc --project tsconfig.types.json ",
-        "pub": "npm publish --registry http://rgbtouch.cn:9999 --access public",
+        "push": "npm publish --registry http://rgbtouch.cn:9999 --access public",
         "lint": "eslint ./src --fix",
         "test": "jest",
         "eject": "react-scripts eject"
