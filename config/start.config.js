@@ -1,7 +1,8 @@
 const path = require("path");
 const CracoAlias = require("craco-alias");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const crypto = require("crypto");
+const buffer = crypto.createHash("md5").update(process.cwd()).digest();
 module.exports = {
     plugins: [
         {
@@ -18,7 +19,7 @@ module.exports = {
     devServer: {
         open: false,
         compress: false,
-        port: Math.floor(Math.random() * 50000 + 10010),
+        port: Math.floor((buffer[0] * (0xff + 1) + buffer[1]) * 0.9 + 8000),
     },
     webpack: {
         configure: (webpackConfig, { env, paths }) => {
